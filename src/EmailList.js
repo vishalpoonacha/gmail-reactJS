@@ -10,6 +10,9 @@ import KeyboardHideIcon from "@material-ui/icons/KeyboardHide";
 import SettingsIcon from "@material-ui/icons/Settings";
 import InboxIcon from "@material-ui/icons/Inbox";
 import Section from "./Section";
+import PeopleIcon from "@material-ui/icons/People";
+import LocalOfferIcon from "@material-ui/icons/LocalOffer";
+import EmailRow from "./EmailRow";
 
 function EmailList() {
   return (
@@ -43,7 +46,24 @@ function EmailList() {
         </div>
       </div>
       <div className="emailList__sections">
-        <Section Icon={InboxIcon} title="primary" color="red" selected />
+        <Section Icon={InboxIcon} title="Primary" color="red" selected />
+        <Section Icon={PeopleIcon} title="Social" color="#1A73E8" />
+        <Section Icon={LocalOfferIcon} title="Promotion" color="green" />
+      </div>
+
+      <div className="emailList__list">
+        <EmailRow
+          title="Twitch"
+          subject="Hey fellow streamers!!"
+          description="This is a test"
+          time="10pm"
+        />
+        <EmailRow
+          title="Twitch"
+          subject="Hey fellow streamers!!"
+          description="This is a test"
+          time="10pm"
+        />
       </div>
     </div>
   );
